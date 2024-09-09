@@ -1,101 +1,119 @@
 /* Geral */
 body {
-    background-color: #1b1b1b; /* Fundo negro */
-    color: #f5f5f5; /* Texto branco suave */
-    font-family: 'Cinzel', serif; /* Fonte gótica e elegante */
-    margin: 0;
+    background-color: #1b1b1b; 
+    color: #f5f5f5;
+    font-family: 'Cinzel', serif;
+    margin: 0 auto;
     padding: 20px;
     line-height: 1.6;
-    background: linear-gradient(180deg, #1b1b1b 60%, #4B0082 100%); /* Gradiente preto para roxo */
+    background-image: url(https://lparchive.org/Umineko-no-Naku-Koro-ni/Update%2073/44-2150.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 800px;
+}
+
+  body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  opacity: 0.85;
+  pointer-events: none;
   }
-  
-  /* Títulos */
-  h1, h2 {
-    color: #ffd700; /* Dourado para um toque mágico */
-    text-shadow: 2px 2px 10px #4B0082; /* Sombra roxa para magia */
-    font-family: 'Cinzel Decorative', serif;
-    letter-spacing: 3px;
-    border-bottom: 2px solid #ffd700;
-    padding-bottom: 10px;
-  }
-  
-  /* Efeito de transição nos títulos */
-  h1:hover, h2:hover {
-    color: #daa520; /* Dourado escuro ao passar o mouse */
-    transition: color 0.3s ease-in-out;
-  }
-  
-  /* Lista de livros */
-  ul {
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+h1, h2 {
+  color: #ffd700;
+  text-shadow: 2px 2px 10px #4B0082;
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 3px;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 10px;
+}
+
+h1:hover, h2:hover {
+  color: #daa520;
+  transition: color 0.3s ease-in-out;
+}
+
+ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  li {
-    background-color: rgba(0, 0, 0, 0.8); /* Caixa com transparência escura */
-    margin: 10px 0;
-    padding: 15px;
-    border: 1px solid #4B0082; /* Borda roxa */
-    border-radius: 8px;
-    box-shadow: 3px 3px 15px #000;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px); /* Efeito de blur gótico */
-  }
-  
-  /* Efeito hover nos livros */
-  li:hover {
-    background-color: rgba(50, 50, 50, 0.9);
-    border-color: #ffd700; /* Borda dourada ao passar o mouse */
-    transform: scale(1.05);
-    box-shadow: 5px 5px 20px #4B0082; /* Sombra roxa */
-  }
-  
-  /* Botões */
-  button {
-    background-color: #4B0082; /* Roxo místico */
-    border: 2px solid #ffd700; /* Borda dourada */
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-family: 'Cinzel', serif;
-  }
-  
-  button:hover {
-    background-color: #551a8b; /* Tom de roxo mais escuro no hover */
-    transform: scale(1.1);
-    border-color: #daa520; /* Dourado mais escuro */
-  }
-  
-  /* Livros Favoritos */
-  ul li.favorite {
-    border: 2px solid #ffd700;
-    background-color: rgba(50, 0, 50, 0.8); /* Roxo escuro e místico */
-  }
-  
-  ul li.favorite button {
-    background-color: #551a8b;
-    border-color: #daa520;
-  }
-  
-  /* Fundo com efeito de neblina mística */
-  body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(75, 0, 130, 0.5), rgba(0, 0, 0, 0.9)); /* Neblina roxa */
-    opacity: 0.1;
-    pointer-events: none;
-  }
-  
-  /* Fonte especial para a página */
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@700&display=swap');
-  
+}
+
+li {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #4B0082;
+  border-radius: 8px;
+  box-shadow: 3px 3px 15px #000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+li:hover {
+  background-color: rgba(50, 50, 50, 0.9);
+  border-color: #ffd700;
+  transform: scale(1.05);
+  box-shadow: 5px 5px 20px #4B0082;
+}
+
+button {
+  background-color: #4B0082;
+  border: 2px solid #ffd700;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Cinzel', serif;
+}
+
+button:hover {
+  background-color: #551a8b;
+  transform: scale(1.1);
+  border-color: #daa520;
+}
+
+ul li.favorite {
+  border: 2px solid #ffd700;
+  background-color: rgba(50, 0, 50, 0.8);
+}
+
+ul li.favorite button {
+  background-color: #551a8b;
+  border-color: #daa520;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(75, 0, 130, 0.5), rgba(0, 0, 0, 0.9)); /* Neblina roxa */
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@700&display=swap');
 
 input {
     margin: 5px;
